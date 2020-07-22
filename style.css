@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content;
+    background-color: #111;
+    gap: 4px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+}
+
+input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 45px;
+    width: 190px;
+    border-radius: 7px;
+}
+
+input::before {
+    content: "Choose Images";
+    background-color: rgb(168, 0, 160);
+    color: #fff;
+    padding: 10px;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
